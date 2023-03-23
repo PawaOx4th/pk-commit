@@ -1,0 +1,27 @@
+{
+  "name": "pk-commit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup src/index.ts ---format cjs,resm --dts",
+    "lint": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@pawaox4th.github.com:PawaOx4th/pk-commit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.1.5",
+    "tsup": "^6.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.5",
+    "typescript": "^5.0.2"
+  }
+}
