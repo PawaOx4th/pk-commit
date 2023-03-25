@@ -28,6 +28,7 @@
   "author": "Kaen Pawanachai",
   "license": "ISC",
   "dependencies": {
+    "execa": "^7.1.1",
     "inquirer": "^9.1.5",
     "inquirer-autocomplete-prompt": "^3.0.0",
     "inquirer-search-list": "^1.2.6",
