@@ -1,5 +1,5 @@
 {
-  "name": "pk-commit",
+  "name": "@pawaox4th/pk-commit",
   "version": "0.0.1-beta.1",
   "description": "",
   "main": "./dist/index.js",
@@ -13,14 +13,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
-    "ci": "pnpm run lint && pnpm run build"
+    "ci": "pnpm run lint && pnpm run build",
+    "release": "pnpm run lint && pnpm run build && changeset version && changeset publish"
   },
   "repository": {
     "type": "git",
     "url": "git@pawaox4th.github.com:PawaOx4th/pk-commit.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kaen Pawanachai",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^9.1.5",
