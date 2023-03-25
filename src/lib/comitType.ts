@@ -1,39 +1,39 @@
 const typeForCommit = [
   {
-    name: "ref♻️:",
-    value: "ref♻️:",
+    name: "ref:♻️ ",
+    value: "ref:♻️ ",
   },
   {
-    value: "chore🤖:",
-    name: "chore🤖:",
+    value: "chore:🤖 ",
+    name: "chore:🤖 ",
   },
   {
-    name: "ci🎡:",
-    value: "ci🎡:",
+    name: "ci:🎡 ",
+    value: "ci:🎡 ",
   },
   {
-    name: "docs✏️:",
-    value: "docs✏️:",
+    name: "docs:✏️ ",
+    value: "docs:✏️ ",
   },
   {
-    name: "feat✨:",
-    value: "feat✨:",
+    name: "feat:✨ ",
+    value: "feat:✨ ",
   },
   {
-    name: "fix🐛:",
-    value: "fix🐛:",
+    name: "fix:🐛 ",
+    value: "fix:🐛 ",
   },
   {
-    name: "perf🚀:",
-    value: "perf🚀:",
+    name: "perf:🚀 ",
+    value: "perf:🚀 ",
   },
   {
-    name: "revert🔀:",
-    value: "revert🔀:",
+    name: "revert:🔀 ",
+    value: "revert:🔀 ",
   },
   {
-    name: "style💄:",
-    value: "style💄:",
+    name: "style:💄 ",
+    value: "style:💄 ",
   },
   {
     name: "test🧪:",

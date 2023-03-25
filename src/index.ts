@@ -2,8 +2,9 @@
 import inquirer, { QuestionCollection } from "inquirer"
 import typeForCommit from "./lib/comitType.js"
 import searchList from "inquirer-search-list"
-import { $, execa } from "execa"
+import { $, execa, ExecaError } from "execa"
 import { COMMAND } from "./lib/command.js"
+import { ChildProcess } from "child_process"
 
 inquirer.registerPrompt("search-list", searchList)
 
@@ -20,13 +21,17 @@ const questions: QuestionCollection = [
     message: `Enter your commit message:
     >`,
     transformer(inputMsg, answers, flags) {
-      return `${answers.type} : ${inputMsg}`
+      return `${answers.type} ${inputMsg}`
+    },
+    filter(answers) {
+      return answers.toLowerCase()
     },
   },
   {
     type: "confirm",
     name: "confirm",
     message: "confirm commit message:",
+    default: true,
   },
 ]
 
@@ -38,20 +43,25 @@ async function activePrompt() {
       `${answers.type} ${answers.message}`,
     ])
 
-    console.log("🎉 Commit success 🎉")
+    if (resultAfterCommit.exitCode === 0) {
+      console.log(`
+      🎉 Commit success 🎉
+      ${resultAfterCommit.stdout}
+      `)
+    }
   })
 }
 
 async function main() {
   try {
     console.clear()
-    const res = await $`git diff HEAD --staged --quiet --exit-code`
-    if (res.exitCode === 0) {
-      await $`git add .`
+    await $`git diff HEAD --staged --quiet --exit-code`
+
+    console.log("❌ Not staged files :")
+  } catch (error) {
+    if ((error as ExecaError)?.exitCode === 1) {
       await activePrompt()
     }
-  } catch (error) {
-    await activePrompt()
   }
 }
 
