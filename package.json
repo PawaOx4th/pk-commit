@@ -5,6 +5,9 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.cjs",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "pk-commit": "dist/index.js"
   },
