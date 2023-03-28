@@ -3,8 +3,6 @@ import inquirer, { QuestionCollection } from "inquirer"
 import typeForCommit from "./lib/comitType.js"
 import searchList from "inquirer-search-list"
 import { $, execa, ExecaError } from "execa"
-import { COMMAND } from "./lib/command.js"
-import { ChildProcess } from "child_process"
 
 inquirer.registerPrompt("search-list", searchList)
 

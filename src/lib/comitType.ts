@@ -1,7 +1,7 @@
 const typeForCommit = [
   {
-    name: "ref:♻️ ",
-    value: "ref:♻️ ",
+    name: "refactor:♻️ ",
+    value: "refactor:♻️ ",
   },
   {
     value: "chore:🤖 ",
