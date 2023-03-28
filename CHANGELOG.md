@@ -1,5 +1,11 @@
 # @pawaox4th/pk-commit
 
+## 0.0.3
+
+### Patch Changes
+
+- cc307e5: Defined type for commit
+
 ## 0.0.2
 
 ### Patch Changes
